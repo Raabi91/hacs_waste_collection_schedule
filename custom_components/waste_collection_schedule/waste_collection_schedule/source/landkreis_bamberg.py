@@ -4,9 +4,9 @@ from waste_collection_schedule.service.ICS import ICS
 
 import urllib
 
-TITLE = "Landkreis Forchheim"
-DESCRIPTION = "Source for Landkreis Forchheim"
-URL = "https://www.abfalltermine-forchheim.de/"
+TITLE = "Landkreis Bamberg"
+DESCRIPTION = "Source for Landkreis Bamberg"
+URL = "http://www.abfalltermine-bamberg.de/"
 TEST_CASES = {
     "Strullendorf": {"city": "Strullendorf"},
     "Schlüsselfeld - Obermelsendorf": {"city": "Schlüsselfeld - Obermelsendorf"}
@@ -14,9 +14,8 @@ TEST_CASES = {
 
 
 class Source:
-    def __init__(self, city, area):
+    def __init__(self, city):
         self._city = city
-        self._area = area
         self._ics = ICS()
 
     def fetch(self):
