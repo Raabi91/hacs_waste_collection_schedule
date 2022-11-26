@@ -21,7 +21,7 @@ class Source:
     def fetch(self):
         place = urllib.parse.quote(self._city)
         r = requests.get(
-            f"http://www.abfalltermine-bamberg.de/Bamberg/Landkreis/{place}/ics?RESTMUELL=true&BIO=true&YELLOW_SACK=true&PAPER=true"
+            f"https://www.abfalltermine-bamberg.de/Bamberg/Landkreis/{place}/ics?RESTMUELL=true&BIO=true&YELLOW_SACK=true&PAPER=true"
         )
         r.encoding = r.apparent_encoding
         dates = self._ics.convert(r.text)
